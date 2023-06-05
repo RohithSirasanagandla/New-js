@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>printing hobbies using functions</title>
+        <script>
+let hobbies = ["Reading", "Painting", "Playing"];
+
+
+function getAllHobbies() {
+  return hobbies;
+}
+
+
+function addHobby(newHobby) {
+  hobbies.push(newHobby);
+}
+
+
+function deleteHobby(hobbyToDelete) {
+  const index = hobbies.indexOf(hobbyToDelete);
+  if (index > -1) {
+    hobbies.splice(index, 1);
+  }
+}
+
+
+console.log(getAllHobbies());
+
+addHobby("Photography");
+console.log(getAllHobbies()); 
+
+deleteHobby("Painting");
+console.log(getAllHobbies());
+</script>
+</head>
+</html>
