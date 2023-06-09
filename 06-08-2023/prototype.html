@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Finding the scond smallest value</title>
+    </head>
+        <body>
+            <script>
+            Array.prototype.secondSmallest = function() {
+  const uniqueArray = Array.from(new Set(this));
+  uniqueArray.sort(function(a, b) {
+    return a - b;
+  });
+ 
+  if (uniqueArray.length < 2) {
+    return null; 
+  }
+  return uniqueArray[1];
+};
+
+
+const numbers = [5, 6, 8, 1, 9, 3, 7];
+const secondSmallest = numbers.secondSmallest();
+console.log(secondSmallest); 
+</script>
+</body>
+</html>
